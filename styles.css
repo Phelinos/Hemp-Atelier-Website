@@ -1424,7 +1424,16 @@ button {
         padding-bottom: 25px;
     }
 
-    .footer-navigation {
+    .footer-navigation {.brand-logo {
+  display: inline-flex;
+  align-items: center;
+}
+
+.brand-logo img {
+  display: block;
+  width: 150px;
+  height: auto;
+}
         flex-wrap: wrap;
 
         gap: 23px;
@@ -1436,4 +1445,15 @@ button {
         gap: 8px;
     }
 
+}
+
+.brand-logo {
+  display: inline-flex;
+  align-items: center;
+}
+
+.brand-logo img {
+  display: block;
+  width: 150px;
+  height: auto;
 }
