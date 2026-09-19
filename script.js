@@ -58,3 +58,38 @@ forms.forEach((form) => {
     }
   });
 });
+
+/* =========================
+   PRIVACY MODAL
+   ========================= */
+
+const privacyModal = document.getElementById("privacy-modal");
+const privacyOpen = document.getElementById("privacy-open");
+const privacyCloseButtons = document.querySelectorAll("[data-close-privacy]");
+
+if (privacyModal && privacyOpen) {
+  privacyOpen.addEventListener("click", () => {
+    privacyModal.classList.add("open");
+    privacyModal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("modal-open");
+  });
+
+  privacyCloseButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      privacyModal.classList.remove("open");
+      privacyModal.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("modal-open");
+    });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (
+      event.key === "Escape" &&
+      privacyModal.classList.contains("open")
+    ) {
+      privacyModal.classList.remove("open");
+      privacyModal.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("modal-open");
+    }
+  });
+}
