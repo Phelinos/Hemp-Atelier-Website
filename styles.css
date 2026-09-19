@@ -1457,3 +1457,9 @@ button {
   width: 150px;
   height: auto;
 }
+
+.footer-logo img {
+  width: 150px;
+  height: auto;
+  filter: brightness(0) invert(1);
+}
